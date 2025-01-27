@@ -8,7 +8,7 @@ public class IsPrimeNumber {
 		//1 and itself. In simpler terms, it cannot be evenly divided by any other numbers except 1 and the number itself.
 		int input=1;
 		boolean isPrime=true;
-		for(int i=2;i<input;i++)
+		for(int i=2;i<=input/2;i++)
 		{
 			if(input%i==0)
 			{
@@ -18,7 +18,7 @@ public class IsPrimeNumber {
 			
 		}
 		
-		if(isPrime)
+		if(isPrime==true)
 		{
 			System.out.println(input + "is Prime");
 		}
