@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -15,6 +15,12 @@ public class ProjectSpecificMethodChild extends ProjectSpecificMethod
 	@Test
 	public void runEditEntity() throws InterruptedException 
 	{
+				//ChromeOptions instance to customize Chrome
+		        ChromeOptions options = new ChromeOptions();
+				// Adding an argument to disable notifications
+		        options.addArguments("--disable-notifications"); 
+				// Initialize ChromeDriver with the ChromeOptions
+		        ChromeDriver driver = new ChromeDriver(options);
 				//Click on the toggle menu button from the left corner
 				driver.findElement(By.xpath("//button[@title='App Launcher']")).click();
 				//Click on the View All 
@@ -43,7 +49,9 @@ public class ProjectSpecificMethodChild extends ProjectSpecificMethod
 				actScroll.scrollToElement(comboButtonElement).click().perform();
 				Thread.sleep(3000);
 				
-				//Select Status as 'Active'				
+				//Select Status as 'Active'			
+				//Udayaprasath Testleaf 2/13/2025 3:15 AM • 
+				//driver.executeScript("arguments[0].click();", status_dd);
 				//WebElement optionActive = driver.findElement(By.xpath("//div[@id='dropdown-element-216']//lightning-base-combobox-item[@data-value='Active']"));
 				//actScroll.scrollToElement(optionActive).click().perform();
 				
