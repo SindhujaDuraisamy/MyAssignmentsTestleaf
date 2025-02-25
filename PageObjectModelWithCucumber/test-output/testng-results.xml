@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-25T02:37:59 EST" name="Default suite" finished-at="2025-02-25T02:38:46 EST" duration-ms="46557">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcase.RunnerClass@3f191845]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-02-25T02:37:59 EST" name="Default test" finished-at="2025-02-25T02:38:46 EST" duration-ms="46557">
+      <class name="testcase.RunnerClass">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:37:59 EST" name="setUpClass" finished-at="2025-02-25T02:38:00 EST" duration-ms="492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4d6ccc97]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:00 EST" name="preConditions" finished-at="2025-02-25T02:38:10 EST" duration-ms="9853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:10 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-25T02:38:23 EST" duration-ms="13440" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["CreateLead with multiple data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["CreateLead functionality of Leaftaps"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:23 EST" name="postConditions" finished-at="2025-02-25T02:38:23 EST" duration-ms="393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="preConditions()[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:23 EST" name="preConditions" finished-at="2025-02-25T02:38:31 EST" duration-ms="7755" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preConditions -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:31 EST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-25T02:38:45 EST" duration-ms="14306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["CreateLead with multiple data"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["CreateLead functionality of Leaftaps"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="postConditions()[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:45 EST" name="postConditions" finished-at="2025-02-25T02:38:46 EST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postConditions -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testcase.RunnerClass@3f191845]" started-at="2025-02-25T02:38:46 EST" name="tearDownClass" finished-at="2025-02-25T02:38:46 EST" duration-ms="23" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- testcase.RunnerClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
