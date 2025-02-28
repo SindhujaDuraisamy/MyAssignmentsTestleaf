@@ -1,0 +1,97 @@
+Marathon 3 Exceptions Faced:
+
+Create Account:
+
+1:
+Exception in thread "main" org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+//driver.findElement(By.className("slds-icon- waffle")).click();
+	      
+	        driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
+
+2:
+Exception in thread "main" org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of undefined (reading 'defaultView')
+  (Session info: chrome=133.0.6943.99)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78eedf89d320412e01e351773ff9d2ff, clickElement {id=f.F37A6E52F036C197C0B116D4767289D7.d.655BF0FC3C1B14AEE67904566946021D.e.155}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.99, chrome: {chromedriverVersion: 133.0.6943.141 (2a5d6da0d61..., userDataDir: C:\Users\Rajes\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64774}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64774/devtoo..., se:cdpVersion: 133.0.6943.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (78eedf89d320412e01e351773ff9d2ff)] -> xpath: //a[@title='Accounts']]
+
+//driver.findElement(By.xpath("//a[@title='Accounts']")).click();
+WebElement accountClick =  driver.findElement(By.xpath("//a[@title='Accounts']"));
+	        driver.executeScript("arguments[0].click()",accountClick);
+
+
+3:
+Exception in thread "main" org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//lightning-base-combobox-item[@data-value='public']"}
+  (Session info: chrome=133.0.6943.99)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+//driver.findElement(By.xpath("//lightning-base-combobox-item[@data-value='public']")).click();
+	      
+	        driver.findElement(By.xpath("//span[text()='Public']")).click();
+
+
+Edit Account:
+
+1:
+Exception in thread "main" org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+//driver.findElement(By.className("slds-icon- waffle")).click();
+	      
+	        driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
+
+2:Exception in thread "main" org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=133.0.6943.99)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Thread.sleep(3000);
+
+
+
+3:
+Exception in thread "main" org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[1]/th[6]"}
+  (Session info: chrome=133.0.6943.99)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+//driver.findElement(By.xpath("//table/tbody/tr[1]/th[6]")).click();
+        driver.findElement(By.xpath("//table/tbody/tr[1]/td[6]")).click();
+
+4:
+Exception in thread "main" org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression (//label[text()='Shipping Street']/following::textarea because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '(//label[text()='Shipping Street']/following::textarea' is not a valid XPath expression.
+ //WebElement shippingStreet = driver.findElement(By.xpath("(//label[text()='Shipping Street']/following::textarea"));
+        WebElement shippingStreet = driver.findElement(By.xpath("(//label[text()='Shipping Street']/following::textarea[1])"));
+
+
+
+5:
+Exception in thread "main" java.lang.AssertionError: verify the mobileNumber expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at coding.marathon3.EditAccount.main(EditAccount.java:73)
+
+
+Delete Account:
+
+1:
+Exception in thread "main" org.openqa.selenium.InvalidSelectorException: Compound class names not permitted
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+//driver.findElement(By.className("slds-icon- waffle")).click();
+//driver.findElement(By.className("slds-icon- waffle")).click();
+        driver.findElement(By.xpath("//div[@class='slds-icon-waffle']")).click();
+
+2:
+// driver.findElement(By.xpath("//a[title()='Delete']")).click();
+        driver.findElement(By.xpath("//a[@title='Delete']")).click();
+
+3:
+Exception in thread "main" java.lang.NumberFormatException: For input string: "50+"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.parseInt(Integer.java:786)
+	at coding.marathon3.DeleteAccount.main(DeleteAccount.java:37)
+
+   //int countAfterDelete = Integer.parseInt(s[1]);
+        int countAfterDelete = Integer.parseInt(s[0]);
